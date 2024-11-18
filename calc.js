@@ -192,7 +192,7 @@ function dfs(p) {
     }
     res.push(x);
     if (res.length >= 10000) {
-      alert('方案数太多，仅计算前一万种。减少一些方块吧~');
+      // alert('方案数太多，仅计算前一万种。减少一些方块吧~');
       return true;
     }
     return false;
@@ -215,4 +215,3 @@ function dfs(p) {
   }
   return false;
 }
-

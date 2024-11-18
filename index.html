@@ -10,12 +10,10 @@
 </head>
 
 <body>
-  <a href="https://space.bilibili.com/277401945" target="_blank">Bilibili 方形的块状代码</a>
   <div id="app">
     <p>行数：<input type="text" v-model="row" /></p>
     <p>列数：<input type="text" v-model="col" /></p>
     <input type="button" value="确定" @click="confirmBoard">
-    <p>红色表示需要摆放的格子，白色表示这里没有格子，点击切换</p>
     <div v-for="(r, i) in board" style="height: 32px;">
       <div
         class="box"
@@ -154,6 +152,7 @@
         }
       }
     }).mount('#app')
+    Vue.methods.confirmBoard()
   </script>
   <style>
     p {
