@@ -13,7 +13,7 @@
   <div id="app">
     <p>行数：<input type="text" v-model="row" /></p>
     <p>列数：<input type="text" v-model="col" /></p>
-    <input type="button" value="确定" @click="confirmBoard">
+    <input id="confirmBoard" type="button" value="确定" @click="confirmBoard">
     <div v-for="(r, i) in board" style="height: 32px;">
       <div
         class="box"
@@ -152,7 +152,10 @@
         }
       }
     }).mount('#app')
-    Vue.methods.confirmBoard()
+  </script>
+  <script>
+    const confirmBoard = document.getElementById('confirmBoard')
+    confirmBoard.click()
   </script>
   <style>
     p {
